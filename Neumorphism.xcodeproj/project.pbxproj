@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 50;
+	objectVersion = 52;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -13,6 +13,12 @@
 		A83A961E2459980F007081BC /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A83A961D2459980F007081BC /* Assets.xcassets */; };
 		A83A96212459980F007081BC /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = A83A96202459980F007081BC /* Preview Assets.xcassets */; };
 		A83A96242459980F007081BC /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = A83A96222459980F007081BC /* LaunchScreen.storyboard */; };
+		A83A962D24599822007081BC /* ModernColorPicker.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A962C24599822007081BC /* ModernColorPicker.swift */; };
+		A83A962F24599828007081BC /* NeumorphicView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A83A962E24599828007081BC /* NeumorphicView.swift */; };
+		A83A963224599957007081BC /* DynamicColor in Frameworks */ = {isa = PBXBuildFile; productRef = A83A963124599957007081BC /* DynamicColor */; };
+		A8E0173424599D300052EDE8 /* NeumorphicModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E0173324599D300052EDE8 /* NeumorphicModifier.swift */; };
+		A8E01736245A5FCF0052EDE8 /* AutoTextColorModifier.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E01735245A5FCF0052EDE8 /* AutoTextColorModifier.swift */; };
+		A8E01738245A6A410052EDE8 /* PathView.swift in Sources */ = {isa = PBXBuildFile; fileRef = A8E01737245A6A410052EDE8 /* PathView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,11 @@
 		A83A96202459980F007081BC /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		A83A96232459980F007081BC /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		A83A96252459980F007081BC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		A83A962C24599822007081BC /* ModernColorPicker.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModernColorPicker.swift; sourceTree = "<group>"; };
+		A83A962E24599828007081BC /* NeumorphicView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NeumorphicView.swift; sourceTree = "<group>"; };
+		A8E0173324599D300052EDE8 /* NeumorphicModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NeumorphicModifier.swift; sourceTree = "<group>"; };
+		A8E01735245A5FCF0052EDE8 /* AutoTextColorModifier.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AutoTextColorModifier.swift; sourceTree = "<group>"; };
+		A8E01737245A6A410052EDE8 /* PathView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PathView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +42,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83A963224599957007081BC /* DynamicColor in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,6 +68,8 @@
 		A83A96162459980D007081BC /* Neumorphism */ = {
 			isa = PBXGroup;
 			children = (
+				A8E0173224599D190052EDE8 /* Modifiers */,
+				A83A962B24599818007081BC /* View */,
 				A83A96172459980D007081BC /* AppDelegate.swift */,
 				A83A96192459980D007081BC /* SceneDelegate.swift */,
 				A83A961B2459980D007081BC /* ContentView.swift */,
@@ -75,6 +89,25 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		A83A962B24599818007081BC /* View */ = {
+			isa = PBXGroup;
+			children = (
+				A83A962E24599828007081BC /* NeumorphicView.swift */,
+				A83A962C24599822007081BC /* ModernColorPicker.swift */,
+				A8E01737245A6A410052EDE8 /* PathView.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		A8E0173224599D190052EDE8 /* Modifiers */ = {
+			isa = PBXGroup;
+			children = (
+				A8E0173324599D300052EDE8 /* NeumorphicModifier.swift */,
+				A8E01735245A5FCF0052EDE8 /* AutoTextColorModifier.swift */,
+			);
+			path = Modifiers;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -91,6 +124,9 @@
 			dependencies = (
 			);
 			name = Neumorphism;
+			packageProductDependencies = (
+				A83A963124599957007081BC /* DynamicColor */,
+			);
 			productName = Neumorphism;
 			productReference = A83A96142459980D007081BC /* Neumorphism.app */;
 			productType = "com.apple.product-type.application";
@@ -119,6 +155,9 @@
 				Base,
 			);
 			mainGroup = A83A960B2459980D007081BC;
+			packageReferences = (
+				A83A963024599957007081BC /* XCRemoteSwiftPackageReference "DynamicColor" */,
+			);
 			productRefGroup = A83A96152459980D007081BC /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -146,8 +185,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				A83A962D24599822007081BC /* ModernColorPicker.swift in Sources */,
+				A8E01738245A6A410052EDE8 /* PathView.swift in Sources */,
+				A8E01736245A5FCF0052EDE8 /* AutoTextColorModifier.swift in Sources */,
 				A83A96182459980D007081BC /* AppDelegate.swift in Sources */,
 				A83A961A2459980D007081BC /* SceneDelegate.swift in Sources */,
+				A83A962F24599828007081BC /* NeumorphicView.swift in Sources */,
+				A8E0173424599D300052EDE8 /* NeumorphicModifier.swift in Sources */,
 				A83A961C2459980D007081BC /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -342,6 +386,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		A83A963024599957007081BC /* XCRemoteSwiftPackageReference "DynamicColor" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/yannickl/DynamicColor.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		A83A963124599957007081BC /* DynamicColor */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = A83A963024599957007081BC /* XCRemoteSwiftPackageReference "DynamicColor" */;
+			productName = DynamicColor;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = A83A960C2459980D007081BC /* Project object */;
 }
